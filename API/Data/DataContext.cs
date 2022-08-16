@@ -7,6 +7,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Data
 {
+    // this object will be used to entialize our database and inject it to 
+    //all of our program
     public class DataContext : DbContext
     {
         public DataContext(DbContextOptions options) : base(options)

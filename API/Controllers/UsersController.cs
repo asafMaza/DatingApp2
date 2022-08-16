@@ -9,10 +9,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
+    // controllers are classes where the api logic resides and is handled
+    // endpoints are the methods within the controller class anotated with
+    // metadata for the function they preform 
+
     [ApiController]
     [Route("api/[controller]")]
     public class UsersController: ControllerBase
     { 
+        //_context is an instance of DataContext and is a dependancy injection 
+        //allowing us to interact with our database
         private readonly DataContext _context;
         public UsersController(DataContext context)
         {
